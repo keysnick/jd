@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/jd_scripts
+          repository: ZhiYi-N/jd
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -38,7 +38,7 @@ jobs:
           npm install
       - name: '运行 【东东工厂】'
         run: |
-          node jd_jdfactory.js
+          node jd_factory.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
